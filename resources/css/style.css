@@ -5,17 +5,31 @@ body {
   background-color: black;
   opacity: 0.9;
   text-align: center;
+}
+
+body, .maincontent {
   margin: 0;
 }
 
-header {
+header, .maincontent, .mission, .products {
   display: flex;
-  position: fixed;
+}
+
+header, .maincontent {
+  width: 100%;
+}
+
+header, .maincontent, .mission {
   align-items: center;
+}
+
+header {
+  position: fixed;
+  background-color: inherit;
   justify-content: space-between;
   height: 69px;
-  width: 100%;
   border-bottom: 1px solid seashell;
+  z-index: 100;
 }
 
 header img {
@@ -27,4 +41,42 @@ header a {
   padding: 10px;
   color: seashell;
   text-decoration: underline;
+}
+
+.maincontent, .mission, #missiontext, .products {
+  border: 1px solid red;
+}
+
+.maincontent {
+  flex-direction: column;
+  padding-top:69px;
+}
+
+.mission {
+  margin: auto;
+  height: 700px;
+  background-image: url("../images/img-mission-background.jpg");
+}
+
+#missiontext {
+  background-color: black;
+  width: 1200px;
+}
+
+.products {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1000px;
+}
+
+.product img {
+  height: 200px;
+  width: 300px;
+  display: block;
+  margin: 10px;
+}
+
+.product {
+  margin-bottom: 10px;
 }
