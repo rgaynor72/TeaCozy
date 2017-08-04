@@ -1,9 +1,12 @@
 body {
   font-family: Helvetica;
   font-size: 22px;
-  color: seashell;
   opacity: 0.9;
   text-align: center;
+}
+
+body, a {
+  color: seashell;
 }
 
 body, header, #missiontext, .location {
@@ -41,12 +44,7 @@ header img {
 
 header a {
   padding: 10px;
-  color: seashell;
   text-decoration: underline;
-}
-
-.maincontent, .mission, #missiontext, .products, #locations, .location {
-  border: 1px solid red;
 }
 
 .maincontent {
@@ -90,15 +88,27 @@ header a {
   background-image: url("../images/img-locations-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  padding: 75px;
 }
 
 #locations h2 {
   margin-bottom: 15px;
 }
 
+.location, footer {
+  margin-left: 20px;
+}
+
 .location {
   width: 300px;
-  margin-left: 20px;
   margin-right: 20px;
   opacity: 1;
+}
+
+.contact {
+  height: 200px;
+}
+
+footer {
+  text-align: left;
 }
