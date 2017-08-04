@@ -2,16 +2,19 @@ body {
   font-family: Helvetica;
   font-size: 22px;
   color: seashell;
-  background-color: black;
   opacity: 0.9;
   text-align: center;
+}
+
+body, header, #missiontext, .location {
+    background-color: black;
 }
 
 body, .maincontent {
   margin: 0;
 }
 
-header, .maincontent, .mission, .products {
+header, .maincontent, .mission, .products, .locations {
   display: flex;
 }
 
@@ -19,13 +22,12 @@ header, .maincontent {
   width: 100%;
 }
 
-header, .maincontent, .mission {
+header, .maincontent, .mission, .locations {
   align-items: center;
 }
 
 header {
   position: fixed;
-  background-color: inherit;
   justify-content: space-between;
   height: 69px;
   border-bottom: 1px solid seashell;
@@ -43,7 +45,7 @@ header a {
   text-decoration: underline;
 }
 
-.maincontent, .mission, #missiontext, .products {
+.maincontent, .mission, #missiontext, .products, #locations, .location {
   border: 1px solid red;
 }
 
@@ -59,13 +61,15 @@ header a {
 }
 
 #missiontext {
-  background-color: black;
   width: 1200px;
+}
+
+.products, .locations {
+  justify-content: center;
 }
 
 .products {
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
   width: 1000px;
 }
@@ -79,4 +83,22 @@ header a {
 
 .product {
   margin-bottom: 10px;
+}
+
+#locations {
+  height: 500px;
+  background-image: url("../images/img-locations-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#locations h2 {
+  margin-bottom: 15px;
+}
+
+.location {
+  width: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  opacity: 1;
 }
